@@ -43,9 +43,15 @@
         "    <div class=\"secKill-button\" id=\"close\"> 关闭 </div>\n" +
         "</div>";
     newElement.innerHTML = html;
-    if($("#secKillForm").length === 0) {
+
+    if(document.getElementById("secKillForm"))
+    {
+    } else {
         document.getElementsByTagName("body")[0].appendChild(newElement);
     }
+    // if($("#secKillForm").length === 0) {
+    //
+    // }
 
     //设置秒杀名称
     $("#taskName").val("秒杀"+document.title);
